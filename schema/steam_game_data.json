@@ -1,0 +1,200 @@
+[
+    {
+        "name": "App ID",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "ID of product as allocated by Steam.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Name",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Product name",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Short Description",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The blurb that appears below the header image of the product.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Developer",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Whoever created the product.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Publisher",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Whoever published the product.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Genre",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The genre(s) that the product is in.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Tags",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The tags that have been assigned to the product.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Type",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Whether the product is a game or hardware (non-game software is also labelled as a game, so you should use the tags to identify those products).",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Categories",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The categories/features that the product has.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Owners",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "An approximate number of owners, according to Steam Spy.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Positive Reviews",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "The number of positive reviews the product has.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Negative Reviews",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "The number of negativereviews the product has.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Price",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "description": "The price of the game in USD.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Initial Price",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "description": "The price of the game in USD at launch.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Discount",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "description": "What percentage sale the product was off by as of 2022/11/8.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "CCU",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "Peak concurrent players as of 2022/11/8.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Languages",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The languages that the product is available in.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Platforms",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "What operating systems the product is available on.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Release Date",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "When the product was first released.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Required Age",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Whether the user needs to be over a certain age to legally purchase.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Website",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "The website of the developer/publisher of the product.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "Header Image",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "A link to the header image of the game.",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    }
+]

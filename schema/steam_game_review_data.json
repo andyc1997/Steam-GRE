@@ -1,0 +1,209 @@
+[
+    {
+        "name": "index",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "Index",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "app_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "Steam app id",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "app_name",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "App name",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "review_id",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Review id",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "language",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Language of review",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "review",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Review text",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "timestamp_created",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "Review creation timestamp",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "timestamp_updated",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE",
+        "description": "Review latest update timestamp",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "recommended",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Whether review recommends the app",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "votes_helpful",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "Number of \"helpful\" votes for review",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "votes_funny",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "Number of \"funny\" votes for review",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "weighted_vote_score",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Score based on number of helpful votes",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "comment_count",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "Number of comments for review",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "steam_purchase",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Whether review author purchased the app on Steam",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "received_for_free",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Whether review author received the app for free",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "written_during_early_access",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE",
+        "description": "Whether review was written during early access",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "author_steamid",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Review author steam id",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "author_num_games_owned",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "Number of games review author owns",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "author_num_reviews",
+        "type": "INTEGER",
+        "mode": "NULLABLE",
+        "description": "Number of lifetime app reviews by author",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "author_playtime_forever",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "description": "Author lifetime playtime of reviewed app",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "author_playtime_last_two_weeks",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "description": "Author playtime of reviewed app in last 2 weeks",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "author_playtime_at_review",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "description": "Author playtime of reviewed app at time of review",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    },
+    {
+        "name": "author_last_played",
+        "type": "NUMERIC",
+        "mode": "NULLABLE",
+        "description": "Author time last played reviewed app",
+        "maxLength": "0",
+        "precision": "0",
+        "scale": "0"
+    }
+]
