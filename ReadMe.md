@@ -31,8 +31,23 @@ Our solution is based on two public datasets on Kaggle:
 The data files are stored in Cloud Storage and then loaded to BigQuery according to the [schema](/schema/).
 
 ## Solution
-Our solution is based on SQL because it can be integrated easily as a backend process in deployment.
-The automated workflow based on SQL with Vector Search 
+Our solution is based on Vector Search in SQL because it can be integrated easily as a backend process in deployment.
+The embedding model is `text-embedding-004`.
+The automated workflow is sequential which accepts user queries in two steps:
+
+The first user query is used to retrieve games satisfying the semantic description of game characteristics or elements e.g.
+
++ I would like to find a multi-person strategic game on farming in an open-world setting.
++ I would like to find a multi-person action RPG game with dragon
+
+Vector search can be applied to textual fields in the first dataset consisting of a complete list of Steam games. 
+To ensure accurate matching, two columns from the first dataset is used: `short description` and `tags`. 
+A game will be returned as a result only if the semantic meaning of both game descriptions and tags are highly relevant to the user query.
+Technically, it is done by an inner join in SQL after embeddings are created.
+
+The second user query is used to explore user comments based on the previous extracted list of games.
+It automates the analysis of customer perceptions of product features across multiple countries:
+
 
 ## Architectual Diagram
 
