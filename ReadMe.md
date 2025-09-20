@@ -23,7 +23,7 @@ The manual process can be broken down into two steps:
 As such, an automated solution using LLM-based text embedding models is proposed.
 
 ## Public Dataset
-Our solution is based on two public datasets on Kaggle:
+Our solution is based on two _public_ datasets on Kaggle:
 
 1. A complete list of Steam games (40.21 MB, 55.7k records): [All 55,000 Games on Steam (November 2022)](https://www.kaggle.com/datasets/tristan581/all-55000-games-on-steam-november-2022)
 2. A list of game reviews (8.17 GB, 21.7m records): [Steam Reviews Dataset 2021](https://www.kaggle.com/datasets/najzeko/steam-reviews-2021)
@@ -31,23 +31,38 @@ Our solution is based on two public datasets on Kaggle:
 The data files are stored in Cloud Storage and then loaded to BigQuery according to the [schema](/schema/).
 
 ## Solution
+
+### Automated Workflow
 Our solution is based on Vector Search in SQL because it can be integrated easily as a backend process in deployment.
 The embedding model is `text-embedding-004`.
-The automated workflow is sequential which accepts user queries in two steps:
+The automated workflow is sequential in design which accepts user queries in two steps:
 
 The first user query is used to retrieve games satisfying the semantic description of game characteristics or elements e.g.
 
 + I would like to find a multi-person strategic game on farming in an open-world setting.
 + I would like to find a multi-person action RPG game with dragon
 
-Vector search can be applied to textual fields in the first dataset consisting of a complete list of Steam games. 
-To ensure accurate matching, two columns from the first dataset is used: `short description` and `tags`. 
+Vector search is applied to textual fields in the first dataset consisting of a complete list of Steam games. 
+To ensure accurate matching, two columns from the first dataset is used to create embeddings: `short description` and `tags`. 
 A game will be returned as a result only if the semantic meaning of both game descriptions and tags are highly relevant to the user query.
-Technically, it is done by an inner join in SQL after embeddings are created.
+Technically, it is done by an inner join of two tables created by vector-searching two embeddings.
 
 The second user query is used to explore user comments based on the previous extracted list of games.
-It automates the analysis of customer perceptions of product features across multiple countries:
+It automates the analysis of customer perceptions of product features across multiple countries e.g.
 
++ Is this game easy to play for elderly?
++ Tell me the music and visual aspects of this game.
++ Is the price expensive or cheap or just affordable given the quality?
+
+Vector search is applied to `review` column in the second dataset consisting of user comments of some Steam games. 
+This automated workflow based on vector search successfully addresses the abovementioned pain points. 
+
+The accuracy of identifying games with specified genre and characteristics improves.
+Second, user comments are retrieved based on semantic meaning but not number of likes.
+
+### Data Model
+
+![Data Model](.\schema\data_model.png "Data Model")
 
 ## Architectual Diagram
 
