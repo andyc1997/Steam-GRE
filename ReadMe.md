@@ -25,8 +25,8 @@ As such, an automated solution using LLM-based text embedding models is proposed
 ## Public Dataset
 Our solution is based on two _public_ datasets on Kaggle:
 
-1. A complete list of Steam games (40.21 MB, 55.7k records): [All 55,000 Games on Steam (November 2022)](https://www.kaggle.com/datasets/tristan581/all-55000-games-on-steam-november-2022)
-2. A list of game reviews (8.17 GB, 21.7m records): [Steam Reviews Dataset 2021](https://www.kaggle.com/datasets/najzeko/steam-reviews-2021)
+1. `steam_game_list` A complete list of Steam games (40.21 MB, 55.7k records): [All 55,000 Games on Steam (November 2022)](https://www.kaggle.com/datasets/tristan581/all-55000-games-on-steam-november-2022)
+2. `review_data` A list of game reviews (8.17 GB, 21.7m records): [Steam Reviews Dataset 2021](https://www.kaggle.com/datasets/najzeko/steam-reviews-2021)
 
 The data files are stored in Cloud Storage and then loaded to BigQuery according to the [schema](/schema/).
 
@@ -62,9 +62,18 @@ Second, user comments are retrieved based on semantic meaning but not number of 
 
 ### Data Model
 
-![Data Model](.\schema\data_model.png "Data Model")
+The connection between `steam_game_list` and `review_data` is the Steam ID of each game `App ID`.
+It is a unique primary key for `steam_game_list` and `review_data` is partitioned by `App ID` to reduce cost in joining tables.
 
-## Architectual Diagram
+![Data Model](./schema/data_model.png "Data Model")
+
+### Architecture Diagram
+
+![Architecture Diagram](./architecture_diagram.png)
+
+### Demo
+The exact implementation can be found in the [notebook](./prototype.ipynb)
+
 
 ## Metrics
 
