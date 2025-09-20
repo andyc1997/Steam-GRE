@@ -57,8 +57,8 @@ It automates the analysis of customer perceptions of product features across mul
 Vector search is applied to `review` column in the second dataset consisting of user comments of some Steam games. 
 This automated workflow based on vector search successfully addresses the abovementioned pain points. 
 
-The accuracy of identifying games with specified genre and characteristics improves.
-Second, user comments are retrieved based on semantic meaning but not number of likes.
+First, the accuracy of identifying games with specified genre and characteristics improves. 
+Second, user comments are retrieved based on semantic meaning in multiple languages but not the number of likes.
 
 ### Data Model
 
@@ -74,7 +74,44 @@ It is a unique primary key for `steam_game_list` and `review_data` is partitione
 ### Demo
 The exact implementation can be found in the [notebook](./prototype.ipynb)
 
+**User Query on Game Characteristics**: I would like to find a multi-person strategic game on farming in an open-world setting.
+
+**Result**: After extracting games with the game characteristics, we calculate a new feature `odd` by dividing the number of positive reviews by the number of negative reviews.
+This new feature measures whether the extent of good rating of a game. 
+![Result](./results/query1_results.png)
+
+**User Query on Product Features**: Is this game easy to play for elderly?
+`Farm Together` and `Farming Simulator 19` with high good-to-bad reviews ratio is commented as friendly game to kids and elderly. So, the ease to play for all ages with is an important factor for farming game.
+
+![Result](./results/query2_results.png)
+
+**User Query on Product Features**: Tell me the music and visual aspects of this game.
+
+**Result**: Both games with high or low good-to-bad reviews ratio may have good music and visual aspects. The result shows that music and visual aspects is not the most important factor.
+
+![Result](./results/query2_results2.png)
+
+## BigQuery Runtime
+
+The SQL queries in our solution can be executed efficiently in a few seconds because of vector indexing and partioning.
+
+#### User Query on Game Characteristics
+![Runtime](./results/query1_runtime.png)
+
+#### User Query on Product Features
+![Runtime](./results/query2_runtime.png)
 
 ## Metrics
 
-## Runtime
+A Medium blog in 2021 ([How Much Time is Spent for Product Managers to do Their Tasks?](https://medium.com/@abrahmarsi/how-much-time-is-spent-for-product-managers-to-do-their-tasks-2842c2488546)) suggests that user research and competitor/feature research take up product managers 80 minutes and 68 minutes, respectively, per day. 
+With Google AI BigQuery, our proposed solution reduces the time of information gathering into only at most 5 minutes, which saves more than 90% time.
+
+
+
+
+
+
+
+
+
+
