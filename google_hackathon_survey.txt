@@ -1,0 +1,33 @@
+**Team Survey: BigQuery AI - Building the Future of Data**
+
+**Instructions:**
+
+*   This survey is for bonus points.
+*   Points are awarded for completeness, not for the content of your answers.
+*   We highly encourage everyone to submit one.
+*   There are 3 questions in total - please answer all 3.
+---
+
+**Team Member Experience:**
+
+1)  **BigQuery AI:** Please list each team member(s) months of experience with BigQuery AI.
+    *   Team Member 1 - andyc97:     0 month
+    *   Team Member 2 - chuiquentin: 0 month
+    *   Team Member 3 - ivanalaw818:  0 month
+    *   Team Member 4 - wkyanalbert: 0 month
+
+2)  **Google Cloud:** Please list each team member(s) months of experience with Google Cloud.
+    *   Team Member 1 - andyc97:      0 month
+    *   Team Member 2 - chuiquentin:  0 month
+    *   Team Member 3 - ivanalaw818:   0 month
+    *   Team Member 4 - wkyanalbert:  0 month
+
+---
+
+3)  **Feedback:**
+
+We’d love to hear from you and your experience in working with the technology during this hackathon, positive or negative. Please provide any feedback on your experience with BigQuery AI.
+
+[Your feedback here]
+
+Creating text embeddings with text-embedding-004 was convenient and fit nicely. However, generating embeddings turned out to be quite costly and often took a long time to finish, which made experimenting a bit tough during the hackathon. For example, we cannot create and store two vector indexes for the same dataset for searching. There may be two columns that need to be searched independently due to unproportionate text length. We also found that common table expression (CTE) is not well integrated for vector_search and ml.generate_embedding in SQL.
